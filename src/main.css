@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#app{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.nav-bar {
+    height: 75px;
+    width: 100%;
+    background: lightgreen;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+arcgis-map {
+    cursor: pointer;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 80%;
+    height: calc(100% - 75px);
+}

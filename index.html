@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>lowheaddam-viewer</title>
+  <!-- Load Calcite Design System -->
+  <script type="module" src="https://js.arcgis.com/calcite-components/3.3.3/calcite.esm.js"></script>
+  <!-- Load the JavaScript Maps SDK core API -->
+  <script src="https://js.arcgis.com/4.34/"></script>
+  <!-- Load the JavaScript Maps SDK Map components or other component packages -->
+  <script type="module" src="https://js.arcgis.com/4.34/map-components/"></script>
+
+  <link rel="stylesheet" href="/src/main.css"/>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+<div id="app">
+  <div class="nav-bar">
+    Low Head Dam Dashboard
+  </div>
+  <arcgis-map item-id="a69f14ea2e784e019f4a4b6835ffd376" center="-105,50" zoom="4">
+    <arcgis-zoom position="top-left"></arcgis-zoom>
+    <arcgis-locate position="top-left" scale="5000"></arcgis-locate>
+
+    <arcgis-expand close-on-esc position="top-right" title="Layer List">
+      <arcgis-layer-list class="large-icon"></arcgis-layer-list>
+    </arcgis-expand>
+    <arcgis-expand close-on-esc position="top-right" title="Basemap Gallery">
+      <arcgis-basemap-gallery></arcgis-basemap-gallery>
+    </arcgis-expand>
+
+    <arcgis-expand close-on-esc position="bottom-left" mode="floating" data-tooltip="Legend">
+      <arcgis-legend legend-style="classic"></arcgis-legend>
+    </arcgis-expand>
+
+    <arcgis-scale-bar position="bottom-right" bar-style="line" unit="dual"></arcgis-scale-bar>
+  </arcgis-map>
+</div>
+</body>
+</html>
