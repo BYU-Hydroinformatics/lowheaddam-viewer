@@ -31,4 +31,5 @@ arcgis-map {
     flex-grow: 1;
     min-height: 80%;
     height: calc(100% - 75px);
+    display: block;
 }

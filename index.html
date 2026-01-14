@@ -5,10 +5,6 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>lowheaddam-viewer</title>
-  <script type="module" src="https://js.arcgis.com/calcite-components/3.3.3/calcite.esm.js"></script>
-  <script src="https://js.arcgis.com/4.34/"></script>
-  <script type="module" src="https://js.arcgis.com/4.34/map-components/"></script>
-  <link rel="stylesheet" href="/src/main.css"/>
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
@@ -20,14 +16,14 @@
     <arcgis-zoom position="top-left"></arcgis-zoom>
     <arcgis-locate position="top-left" scale="5000"></arcgis-locate>
 
-    <arcgis-expand close-on-esc position="top-right" title="Layer List">
+    <arcgis-expand position="top-right" title="Layer List">
       <arcgis-layer-list class="large-icon"></arcgis-layer-list>
     </arcgis-expand>
-    <arcgis-expand close-on-esc position="top-right" title="Basemap Gallery">
+    <arcgis-expand position="top-right" title="Basemap Gallery">
       <arcgis-basemap-gallery></arcgis-basemap-gallery>
     </arcgis-expand>
 
-    <arcgis-expand close-on-esc position="bottom-left" mode="floating" data-tooltip="Legend">
+    <arcgis-expand position="bottom-left" mode="floating" data-tooltip="Legend">
       <arcgis-legend legend-style="classic"></arcgis-legend>
     </arcgis-expand>
 
