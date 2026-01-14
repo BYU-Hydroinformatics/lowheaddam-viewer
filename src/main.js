@@ -14,7 +14,7 @@ require(
 
       // add the lowheaddam.geojson layer from the public folder
       const lowheadDamsLayer = new GeoJSONLayer({
-        url: '/static/data/lowheaddams.geojson',
+        url: '/lowheaddams.geojson',
         title: 'Low Head Dams',
         renderer: {
           type: "simple",
@@ -30,8 +30,15 @@ require(
           }
         },
         popupTemplate: {
-          title: "{DAM_NAME}",
-          content: "<b>Dam Name:</b> {DAM_NAME}<br><b>River:</b> {RIVER_NAME}<br><b>State:</b> {STATE}<br><b>Height (ft):</b> {HEIGHT_FT}<br><b>Purpose:</b> {PURPOSE}"
+          title: "{name}",
+          content: "" +
+            "<b>Dam Name:</b> {name}<br>" +
+            "<b>City</b>: {city}<br>" +
+            "<b>County</b>: {county}<br>" +
+            "<b>State:</b> {state}<br>" +
+            "<b>Known Fatalities</b>: {num_fatalities}<br>" +
+            "<b>Minimum Discharge for Hydraulic Jump</b>: {Qmin} m<sup>3</sup>/s<br>" +
+            "<b>Maximum Discharge for Hydraulic Jump</b>: {Qmax} m<sup>3</sup>/s<br>"
         }
       })
 
