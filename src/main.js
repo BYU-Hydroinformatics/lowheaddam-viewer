@@ -23,8 +23,9 @@ document.querySelector('arcgis-map').addEventListener('arcgisViewReadyChange', (
   })
 
   const lowheadDamsLayer = new GeoJSONLayer({
+    url: new URL('/lowheaddams.geojson', window.location.origin + import.meta.env.BASE_URL).href,
     // url: new URL('/lowheaddams.geojson', import.meta.url).href,
-    url: '/lowheaddams.geojson',
+    // url: '/lowheaddams.geojson',
     title: 'Low Head Dams',
     renderer: {
       type: "simple",
